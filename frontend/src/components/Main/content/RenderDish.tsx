@@ -8,7 +8,6 @@ export default function RenderDish({ dishes }: RenderDishProps) {
   const location = useLocation();
   const hideAdminBtns = location.pathname === "/admin/home";
   const [dishesData, setDishesData] = useState<Dish[] | null>(dishes || null);
-  console.log(apiUrl);
   useEffect(() => {
     if (!dishes) {
       async function fetchData() {
