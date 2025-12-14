@@ -1,0 +1,30 @@
+@use "./components/Header/header";
+@use "./components/Main/main";
+@use "./components/Footer/footer";
+@use "./mediaQueries";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  //outline: 1px solid red;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 50px;
+}
+
+#root {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}

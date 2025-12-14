@@ -1,0 +1,222 @@
+.upload-dish-menu {
+  display: grid;
+  grid-template-columns: 0.24fr auto;
+}
+.upload-dish-menu .side-menu {
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  padding: 1.5em 1.2em;
+  width: 250px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+.upload-dish-menu .side-menu__option-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 15px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.upload-dish-menu .side-menu__option-container:first-of-type {
+  margin-top: 10px;
+}
+.upload-dish-menu .side-menu__option-container:hover {
+  box-shadow: 0 4px 12px rgba(3, 62, 114, 0.15);
+}
+.upload-dish-menu .side-menu__option-container .option {
+  display: block;
+  position: relative;
+  color: #555;
+  padding: 0.75em 1.2em;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease, font-weight 0.3s ease, background-color 0.3s ease;
+}
+.upload-dish-menu .side-menu__option-container .option::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(3, 62, 114, 0.15);
+  border-radius: 8px 0 0 8px;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+.upload-dish-menu .side-menu__option-container .option:hover {
+  color: #033e72;
+  font-weight: 700;
+  background-color: #f0f5fb;
+}
+.upload-dish-menu .side-menu__option-container .option:hover::before {
+  width: 6px;
+}
+.upload-dish-menu .side-menu__option-container.active {
+  border-color: #033e72;
+  box-shadow: 0 0 10px rgba(3, 62, 114, 0.3);
+}
+.upload-dish-menu .side-menu__option-container.active .option {
+  color: #033e72;
+  font-weight: 700;
+}
+.upload-dish-menu .side-menu__option-container.active .option::before {
+  width: 6px;
+  background-color: #033e72;
+}
+.upload-dish-menu .main-wrapper {
+  padding: 1.5em 1.2em;
+  width: 100vw;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+.upload-dish-menu .main-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+.upload-dish-menu .main-wrapper form input[type=file] {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  background-color: #fafafa;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.upload-dish-menu .main-wrapper form input[type=file]::file-selector-button {
+  background-color: #f8b500;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  margin-right: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.upload-dish-menu .main-wrapper form input[type=file]::file-selector-button:hover {
+  background-color: #e4a700;
+  transform: translateY(-1px);
+}
+.upload-dish-menu .main-wrapper form input[type=file]::file-selector-button:active {
+  background-color: #cc9600;
+  transform: translateY(1px);
+}
+.upload-dish-menu .main-wrapper form input[type=file]:hover {
+  background-color: #f0f4ff;
+  border-color: #a5b9ff;
+}
+.upload-dish-menu .main-wrapper form input[type=file]:focus {
+  outline: none;
+  border-color: #033e72;
+  box-shadow: 0 0 6px rgba(3, 62, 114, 0.3);
+}
+.upload-dish-menu .main-wrapper form input[type=text],
+.upload-dish-menu .main-wrapper form textarea,
+.upload-dish-menu .main-wrapper form select {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75em 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+.upload-dish-menu .main-wrapper form input[type=text]:focus,
+.upload-dish-menu .main-wrapper form textarea:focus,
+.upload-dish-menu .main-wrapper form select:focus {
+  outline: none;
+  border-color: #033e72;
+  box-shadow: 0 0 6px rgba(3, 62, 114, 0.4);
+  background-color: #f9fbff;
+}
+.upload-dish-menu .main-wrapper form textarea {
+  min-height: 10em;
+  resize: vertical;
+}
+.upload-dish-menu .main-wrapper form textarea:last-of-type {
+  min-height: 20em;
+}
+.upload-dish-menu .main-wrapper form .file-category {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+.upload-dish-menu .main-wrapper form .file-category input[type=file] {
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5em;
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+.upload-dish-menu .main-wrapper form .file-category input[type=file]:hover {
+  background-color: #f0f4ff;
+}
+.upload-dish-menu .main-wrapper form .file-category select {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  font-size: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+.upload-dish-menu .main-wrapper form .file-category select option {
+  text-align: center;
+}
+.upload-dish-menu .main-wrapper form .file-category select:focus {
+  outline: none;
+  border-color: #033e72;
+  box-shadow: 0 0 5px rgba(3, 62, 114, 0.4);
+}
+.upload-dish-menu .main-wrapper form .submit-button {
+  text-align: center;
+}
+.upload-dish-menu .main-wrapper form .submit-button button[type=submit] {
+  background-color: #f8b500;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9em 2em;
+  width: 220px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.upload-dish-menu .main-wrapper form .submit-button button[type=submit]:hover {
+  background-color: #e4a700;
+  transform: translateY(-2px);
+}
+.upload-dish-menu .main-wrapper form .submit-button button[type=submit]:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(3, 62, 114, 0.5);
+}
+
+.main-titles {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  scroll-margin-top: 100dvh;
+}
+
+.modal-active {
+  background-color: red !important;
+}/*# sourceMappingURL=SubirPlatillo.css.map */

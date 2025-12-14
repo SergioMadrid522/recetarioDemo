@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Olivia";
+  src: url("/fonts/Olivia.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/fonts/BrittanySignature.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --Olivia: "Olivia", sans-serif;
+  --Brittany: "BrittanySignature", sans-serif;
+  --Montserrat-Regular: "Montserrat-Regular", sans-serif;
+}
